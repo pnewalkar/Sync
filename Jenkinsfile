@@ -3,13 +3,11 @@ node{
      git 'https://github.com/pnewalkar/Sync.git'
    }
    stage('Dotnet Build'){
-   // def mvnHome =  tool name: 'maven_3_5_0', type: 'maven'   
-   // sh "/Maintel.Icon.Portal.Sync.HighlightAPI dotnet build"
       sh label: '', script: '''cd Maintel.Icon.Portal.Sync.HighlightAPI
       dotnet build'''
    }
-     // stage('Deploy'){
-      //def mvnHome =  tool name: 'maven_3_5_0', type: 'maven'   
-      //sh "${mvnHome}/bin/mvn deploy"
-   //}
+    stage('Dotnet Test'){
+      sh label: '', script: '''cd Maintel.Icon.Portal.Sync.HighlightAPI.Spec
+      dotnet test'''   
+   }
 }
