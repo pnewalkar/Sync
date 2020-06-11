@@ -4,7 +4,7 @@ node{
    }
    stage('Dotnet Build'){
    // def mvnHome =  tool name: 'maven_3_5_0', type: 'maven'   
-      sh "/dotnet build"
+      sh "Maintel.Icon.Portal.Sync.HighlightAPI/dotnet build"
    }
      // stage('Deploy'){
       //def mvnHome =  tool name: 'maven_3_5_0', type: 'maven'   
