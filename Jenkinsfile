@@ -17,7 +17,7 @@ node{
    }
    
     stage('Code Deployment'){
-      sh label: '', script: ' ansible-playbook /opt/deployment/sync-deployment.yml -i hosts'
+      sh label: '', script: 'ansible-playbook /opt/deployment/sync-deployment.yml -i /opt/deployment/hosts'
    }
 
 }
