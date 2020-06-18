@@ -1,4 +1,3 @@
-def BUILDVERSION = sh(script: "echo `date +%s`", returnStdout: true).trim()
 properties([parameters([string(defaultValue: '0', description: 'give the build number', name: 'select_build', trim: false)])])
 
 node{
