@@ -16,7 +16,7 @@ node{
       zip -r /Artifacts/Artifacts.zip /Artifacts/'''
    }
    
-    stage('Zip Artifacts'){
+    stage('Code Deployment'){
       sh label: '', script: ' ansible-playbook /opt/deployment/sync-deployment.yml -i hosts'
    }
 
