@@ -1,3 +1,5 @@
+properties([parameters([string(defaultValue: '0', description: 'give the build number', name: 'select_build', trim: false)])])
+
 node{
    stage('SCM Checkout'){
      git 'https://github.com/pnewalkar/Sync.git'
