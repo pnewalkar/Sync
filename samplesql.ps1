@@ -1,0 +1,1 @@
+﻿Invoke-Sqlcmd -ServerInstance PORTAL-DEV02\SQLEXPRESS -U sa -P Supertown84!  -Query "SELECT * FROM MaintelPermissions.INFORMATION_SCHEMA.TABLES;"
