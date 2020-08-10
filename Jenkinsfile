@@ -22,4 +22,8 @@ node{
       sh label: '', script: 'ansible-playbook /opt/deployment/sync-deployment.yml -i /opt/deployment/hosts'
    }
 
+    stage('DB Deployment'){
+      sh label: '', script: 'ansible-playbook /opt/deployment/db-deployment.yml -i /opt/deployment/hosts'
+   }
+
 }
