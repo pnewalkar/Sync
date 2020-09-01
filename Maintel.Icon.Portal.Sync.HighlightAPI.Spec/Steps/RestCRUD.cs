@@ -10,26 +10,11 @@ namespace Maintel.Icon.Portal.Sync.HighlightAPI.Spec.Steps
     [Binding]
     public class RestCRUD
     {
-        // string _baseURL = "http://localhost:5000/api/v1/";
-        // string _baseURL = "http://localhost:9017/api/v1/";
-        string _baseURL = "https://dev-sync-highlightapi.iconlab.local/api/v1/";
-        // string _baseURL = "https://test-sync-highlightapi.iconlab.local/api/v1/";
-        // string _baseURL = "https://ext-test-sync-highlightapi.iconlab.local/api/v1/";
-        // string _baseURL = "https://stag-sync-highlightapi.iconlab.local/api/v1/";
-        // string _baseURL = "https://prod-sync-highlightapi.iconlab.local/api/v1/";
+        string _baseURL = TestContext.Parameters["baseURL"];
+        string _connectionString = TestContext.Parameters["connectionString"];
 
         object _receivedObject;
-        List<object> _receivedObjects;
-
-        //The connection string to the local SQL server database
-        // string _connectionString = @"Server=.\SQLEXPRESS;Database=Maintel.Icon.Portal.Auth.Database;UID=MaintelAdmin;Password=MaintelAdmin;";
-        //The connection string to the dev SQL server database
-        string _connectionString = @"Server=10.130.15.30\SQLEXPRESS;Database=Maintel.Icon.Portal.Auth.Database;UID=MaintelAdmin;Password=MaintelAdmin;";
-        //The connection string to the test SQL server database
-        // string _connectionString = @"Server=10.130.15.31\SQLEXPRESS;Database=Maintel.Icon.Portal.Auth.Database;UID=MaintelAdmin;Password=MaintelAdmin;";
-        //The connection string to the external test SQL server database
-        // string _connectionString = @"Server=10.130.6.21\SQLEXPRESS;Database=Maintel.Icon.Portal.Auth.Database;UID=MaintelAdmin;Password=MaintelAdmin;";
-
+        List<object> _receivedObjects;       
 
 
         //The results of the query executed against the SQL database
