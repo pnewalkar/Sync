@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RunSettings>
-  <!-- Parameters used by tests at run time -->
-  <TestRunParameters>
-    <Parameter name="baseURL" value="https://ext-test-sync-highlightapi.iconlab.local/api/v1/" />
-    <Parameter name="connectionString" value="Server=10.130.6.21\SQLEXPRESS;Database=Maintel.Icon.Portal.Auth.Database;UID=MaintelAdmin;Password=MaintelAdmin;" />
-  </TestRunParameters>
-</RunSettings>
