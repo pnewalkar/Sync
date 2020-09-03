@@ -22,7 +22,7 @@ pipeline {
 		stage('Dotnet Test') {
             steps {
                 sh label: '', script: '''cd Maintel.Icon.Portal.Sync.HighlightAPI.Spec
-				dotnet test'''
+				dotnet test --settings:Settings/dev.runsettings'''
             }
         }
 		stage('Zip Artifacts') {
